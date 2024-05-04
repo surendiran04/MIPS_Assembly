@@ -12,7 +12,7 @@
  
  div $t3,$t0,10  # wecan use immediate values
  
- div $t0,$t1     #for higher digits we can use mult
+ div $t0,$t1     #for higher digits we can use 2-reg
  mflo $s0  #quotient
  mfhi $s1  #remainder
  
