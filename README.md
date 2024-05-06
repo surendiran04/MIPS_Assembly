@@ -5,16 +5,17 @@ name: datatype value
 • real: .float 2.2
 • real: .double 3.512
 • inStr: .space 2
+
  
- li $v0, ____
- 1 - print integer
- 2 -  print float
- 3 - print double
- 4 - print string / character
- 5 - get integer
- 6 - get float
- 7 - get double
- 8 - get string
+ li $v0, ____     <br>
+ 1 - print integer   <br>
+ 2 -  print float   <br>
+ 3 - print double  <br>
+ 4 - print string /character <br>
+ 5 - get integer   <br>
+ 6 - get float    <br>
+ 7 - get double    <br>
+ 8 - get string  
 
 
 b target_label similiar to j target_label (both will not return to the main fn where it get called)
