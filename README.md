@@ -1,10 +1,10 @@
 name: datatype value 
-• msg: .asciiz “Hello \n”
-• letter: .byte ‘a’
-• number: .word 97
-• real: .float 2.2
-• real: .double 3.512
-• inStr: .space 2
+• msg: .asciiz “Hello \n” <br>
+• letter: .byte ‘a’  <br>
+• number: .word 97  <br>
+• real: .float 2.2   <br>
+• real: .double 3.512  <br>
+• inStr: .space 2   <br>
 
  
  li $v0, ____     <br>
@@ -17,13 +17,13 @@ name: datatype value
  7 - get double    <br>
  8 - get string  
 
-
+<h3>Branch Instruction:</h3> <br>
 b target_label similiar to j target_label (both will not return to the main fn where it get called)
 
-beq $register, $register, target_label
-beq - branches to the target_label if the values stored in the two registers are equal
-bne – branch if the two registers are not equal.
-blt – branch if the first register is less than the second register.
-ble – branch if the first register is less than or equal to the second register.
-bgt – branch if the first register is greater than the second register.
-bge – branch if the first register is greater than or equal to the second register.
+beq $register, $register, target_label  <br>
+beq - branches to the target_label if the values stored in the two registers are equal  <br>
+bne – branch if the two registers are not equal. <br>
+blt – branch if the first register is less than the second register. <br>
+ble – branch if the first register is less than or equal to the second register. <br>
+bgt – branch if the first register is greater than the second register.  <br>
+bge – branch if the first register is greater than or equal to the second register. <br>
