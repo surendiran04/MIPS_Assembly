@@ -16,7 +16,15 @@ name: datatype value <br>
  5 - get integer   <br>
  6 - get float    <br>
  7 - get double    <br>
- 8 - get string  
+ 8 - get string   <br>
+
+• la - string /character <br>
+• lw - integer  <br>
+• lwc1 - float  <br>
+• ldc1 - double  <br>
+
+For string and integer the value that needed to be printed should be in $a0 register <br>
+For float and doubles the values that needed to be printed should be in $f12
 
 <h3>Branch Instruction:</h3> <br>
 b target_label similiar to j target_label (both will not return to the main fn where it get called)
