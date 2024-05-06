@@ -7,14 +7,14 @@ name: datatype value
 • inStr: .space 2
  
  li $v0, ____
-• 1 - print integer
-• 2 -  print float
-• 3 - print double
-• 4 - print string / character
-• 5 - get integer
-• 6 - get float
-• 7 - get double
-• 8 - get string
+ 1 - print integer
+ 2 -  print float
+ 3 - print double
+ 4 - print string / character
+ 5 - get integer
+ 6 - get float
+ 7 - get double
+ 8 - get string
 
 
 b target_label similiar to j target_label (both will not return to the main fn where it get called)
