@@ -18,6 +18,7 @@ name: datatype value <br>
  7 - get double    <br>
  8 - get string   <br>
 
+ <h6>Load instructions</h6>
 • la - string /character <br>
 • lw - integer  <br>
 • lwc1 - float  <br>
