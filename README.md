@@ -1,4 +1,5 @@
-name: datatype value 
+<h3>Different Data Types:</h3> <br>
+name: datatype value <br>
 • msg: .asciiz “Hello \n” <br>
 • letter: .byte ‘a’  <br>
 • number: .word 97  <br>
@@ -6,7 +7,7 @@ name: datatype value
 • real: .double 3.512  <br>
 • inStr: .space 2   <br>
 
- 
+ <h3>Instruction:</h3> <br>
  li $v0, ____     <br>
  1 - print integer   <br>
  2 -  print float   <br>
