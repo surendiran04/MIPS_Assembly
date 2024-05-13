@@ -1,0 +1,41 @@
+.data
+array:	.space 36
+input: .asciiz "\nEnter a number:"
+new: .asciiz "\n"
+.text
+addi $s0, $zero,36                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                                                                                                                                                          
+while:                                                                                                                                                                                                                                                                                                                                                                                                         
+         beq $s1, $s0, exit                                                                                                                                                                               
+         li $v0, 4                                                                                                                                                                                          
+         la $a0, input                                                                                                                                                                                      
+         syscall                                                                                                                                                                                                          
+         li $v0, 5                                                                                                                                                                                                 
+         syscall                                                                                                                                                                                                            
+         move $t0, $v0                                                                                                                                                                                                  
+         sw $t0, array($s1)                                                                                                                                                                                                          
+         addi $s1, $s1, 4                                                                                                                                                                                                
+         j while                                                                                                                                                                                                           
+                                                                                                                                                                                                     
+ print:                                                                                                                                                                                                                  
+        beq $s2, $s0, exit                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+        lw $t0, array($s2)                                                                                                                                                                                 
+        li $v0, 1                                                                                                                                                                                                            
+        add $a0, $t0, $zero                                                                                                                                                                                                
+        syscall                                                                                                                                                                                                           
+        li $v0, 4                                                                                                                                                                                         
+        la $a0, new                                                                                                                                                                                                           
+        syscall                                                                                                                                                                                                   
+        addi $s2, $s2, 4                                                                                                                                                                                                           
+        j print                                                                                                                                                                                                 
+  exit:                                                                                                                                                                                                                   
+      li $v0, 10                                                                                                                                                                                                 
+      syscall                                                                                                                                                                                         
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                           
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                  
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                            
+                                                                                                                                                                                                                   
+               

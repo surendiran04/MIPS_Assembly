@@ -1,0 +1,80 @@
+.data                                                                                                                                                                                                                                                                                                                                                                                                           
+     mat: .word 2, 0, 4                                                                                                                                                                                                                                                                                                                                                                             
+          .word 0, 1, 0                                                                                                                                                                                         
+          .word 4, 0, 2                                                                                                                                                                                                        
+     size: .word 3  
+     msg  : .asciiz "The sum of both the diagonals:\n" 
+     n  : .asciiz "\n"                                                                                                                                                                                                                                                                                                                                                                         
+.text                                                                                                                                                                                                                                                                                                                                                                                                         
+        lw $s0, size                                                                                                                                                                                                                                                                                                                                                                                           
+        addi $s1, $zero, 0                                                                                                                                                                                                                                                                                                                                                                              
+        addi $s2, $zero, 0                                                                                                                                                                                                                                                                                                                                                                               
+        addi $s3, $zero, 0                                                                                                                                                                                                                                                                                                                                                                                
+        addi $s4, $zero, 2                                                                                                                                                                                                                                                                                                                                                                              
+  while: 
+       mul $t2, $s0, $t0                                                                                                                                                                                                                                                                                                                                                            
+       add $t2, $t1, $t2                                                                                                                                                                                                     
+       mul $t2, $t2, 4                                                                                                                                                                                                             
+       lw  $t3, mat($t2)                                                                                                                                                                                           
+       add $s1, $s1, $t3                                                                                                                                                                                                             
+       mul $t4, $s0, $s3                                                                                                                                                                                           
+       add $t4, $s4, $t4                                                                                                                                                                                                             
+       mul $t4, $t4, 4                                                                                                                                                                                          
+       lw  $t5, mat($t4)                                                                                                                                                                                                            
+       add $s2, $s2, $t5                                                                                                                                                                                           
+       addi $s3, $s3, 1                                                                                                                                                                                                            
+       subi $s4, $s4, 1
+       addi $t0, $t0, 1                                                                                                                                                                                                            
+       addi $t1, $t1, 1                                                                                                                                                                                            
+       bge $t0, $s0, exit                                                                                                                                                                                                              
+       j while   
+  exit:  
+        li $v0, 4                                                                                                                                                                                                           
+        la $a0,msg,                                                                                                                                                                                            
+        syscall                                                                                                                                                                                            
+        li $v0, 1                                                                                                                                                                                                            
+        move $a0, $s1,                                                                                                                                                                                            
+        syscall
+        li $v0, 4                                                                                                                                                                                                           
+        la $a0,n,                                                                                                                                                                                            
+        syscall
+        li $v0, 1                                                                                                                                                                                                            
+        move $a0, $s2,                                                                                                                                                                                            
+        syscall                                                                                                                                                                                                             
+                                                                                                                                                                                                  
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                 
+                                                                                                                                                                                                                   
+
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                  
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                  
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                   
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                  
+                                                                                                                                                                                                                   
+                                                                                                                                                                                               
+                                                                                                                                                                                                                   
+
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                          
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                             
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                         
+                                                                                                                                                                                                                   
+                                                                                                                                                                                  
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                            
+                                                                                                                                                                                                                   
+
+                                                                                                                                                                                                                   
+
+                                                                                                                                                                                                                   
+
+                                                                                                                                                                                                                   
+                li $v0, 10                                                                                                                                                                                         
+                                                                                                                                                                                                                   
+                syscall        
