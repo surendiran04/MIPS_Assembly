@@ -38,3 +38,4 @@ blt – branch if the first register is less than the second register. <br>
 ble – branch if the first register is less than or equal to the second register. <br>
 bgt – branch if the first register is greater than the second register.  <br>
 bge – branch if the first register is greater than or equal to the second register. <br>
+begz – branch if the register is equal to the zero(begz $reg,target_label). <br>
