@@ -1,3 +1,4 @@
+MIPS stands for Microprocessor without Interlocked Pipelined Stages <br/>
 <h3>Different Data Types:</h3> <br>
 name: datatype value <br>
 • msg: .asciiz “Hello \n” <br>
